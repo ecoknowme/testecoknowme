@@ -65,8 +65,18 @@
                 <li><a href="#">Automation</a></li>
               </ul>
             </li>
+            
+            <li class="drop-down"><a href="#">Store</a>
+            <ul>
+                <li><a href="#">Agricultural Products</a></li>
+                <li><a href="#">Organic Urban Harvest</a>
+                </ul>
+            
+            </li>
             <li class="drop-down"><a href="{{ url_for('main.home') }}">Community</a>
               <ul>
+                <li><a href="{{ url_for('main.home') }}">Learn to Grow</a></li>
+                <li><a href="{{ url_for('main.home') }}">Solution</a></li>
                 <li><a href="{{ url_for('main.home') }}">Blog</a></li>
                 <li><a href="{{ url_for('posts.new_post') }}">New Post</a>
                 </ul>
@@ -78,7 +88,7 @@
               </ul>
             </li>
             <li><a href="">Store</a></li>
-            <li><a href="{{ url_for('main.about') }}">About</a></li>
+            <li><a href="{{ url_for('main.about') }}">About Us</a></li>
             <li class="drop-down"><a href="#">Account</a>
               <ul>
             {% if current_user.is_authenticated %}
