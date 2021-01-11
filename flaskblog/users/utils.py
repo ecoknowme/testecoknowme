@@ -39,7 +39,7 @@ def get_country(ip_address):
         response = requests.get("http://ip-api.com/json/{}".format(ip_address))
         js = response.json()
         country=js["country"]
-	ccd = js["countryCode"]
+	#ccd = js["countryCode"]
         rejion = js["regionName"]
         city = js["city"]
         lat = js['lat']
@@ -52,7 +52,7 @@ def get_country(ip_address):
         data.append(lat)
         data.append(lon)
         data.append(timezone)
-	data.append(ccd)
+	#data.append(ccd)
         return data
     except Exception as e:
         return "Unknown"
